@@ -25,9 +25,14 @@ import java.util.Set;
 import java.nio.charset.StandardCharsets;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.BasicConfigurator;
+
 
 public class SampleApp {
 	private static final Log LOG = LogFactory.getLog(SampleApp.class);
+	static {
+		BasicConfigurator.configure();
+	}
 
 	private static final Set<String> VALID_ACCESS_TYPES = new HashSet<String>();
 
@@ -98,17 +103,18 @@ public class SampleApp {
 	private IAuthorizer createAuthorizer() {
 		IAuthorizer ret = null;
 
-		String authzClassName = System.getProperty("sampleapp.authorizer");
+		//String authzClassName = System.getProperty("sampleapp.authorizer");
 
-		if(authzClassName != null) {
-			try {
-				Class<IAuthorizer> clz = (Class<IAuthorizer>) Class.forName(authzClassName);
+		//if(authzClassName != null) {
+		try {
+			// ret = new RangerAuthorizer();
 
-				ret = clz.newInstance();
-			} catch(Exception excp) {
-				LOG.warn("Failed to create authorizer of type '" + authzClassName + "'", excp);
-			}
+			// ret = clz.newInstance();
+			System.out.println ("Manually avoided creating a custom class. Should defualt to DefaultAuthorizer.");
+		} catch(Exception excp) {
+			LOG.warn("Failed to create authorizer of type: " , excp);
 		}
+		//}
 
 		if(ret == null) {
 			LOG.info("Using default authorizer");
