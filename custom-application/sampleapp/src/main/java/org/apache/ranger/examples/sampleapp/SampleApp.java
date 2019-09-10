@@ -47,9 +47,10 @@ public class SampleApp {
 	}
 
 	public void init() {
-		VALID_ACCESS_TYPES.add("read");
-		VALID_ACCESS_TYPES.add("write");
-		VALID_ACCESS_TYPES.add("execute");
+		VALID_ACCESS_TYPES.add("get");
+		VALID_ACCESS_TYPES.add("post");
+		VALID_ACCESS_TYPES.add("delete");
+		VALID_ACCESS_TYPES.add("put");
 
 		authorizer = createAuthorizer();
 	}
@@ -107,12 +108,12 @@ public class SampleApp {
 
 		//if(authzClassName != null) {
 		try {
-			// ret = new RangerAuthorizer();
+			ret = new RangerWebAuthorizer();
 
 			// ret = clz.newInstance();
-			System.out.println ("Manually avoided creating a custom class. Should defualt to DefaultAuthorizer.");
+			System.out.println (" Created Ranger Web Authorizer!");
 		} catch(Exception excp) {
-			LOG.warn("Failed to create authorizer of type: " , excp);
+			LOG.warn("Failed to create custom web authorizer of type: " , excp);
 		}
 		//}
 
