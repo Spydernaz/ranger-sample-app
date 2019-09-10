@@ -21,7 +21,7 @@
     <name>Ranger Examples - SampleApp</name>
     <description>Ranger Examples - SampleApp</description>
     <packaging>jar</packaging>
-    <groupId>org.apache.ranger</groupId>
+    <groupId>com.spyder.security</groupId>
     <version>0.1-ALPHA</version>
     <properties>
         <maven.version.required>3.3.3</maven.version.required>
@@ -66,7 +66,7 @@
 					<!-- MainClass in mainfest make a executable jar -->
 					<archive>
 					  <manifest>
-						<mainClass>org.apache.ranger.examples.sampleapp.SampleApp</mainClass>
+						<mainClass>com.spyder.security.sampleapp.SampleApp</mainClass>
 					  </manifest>
 					</archive>
 
