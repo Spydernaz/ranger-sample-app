@@ -40,7 +40,7 @@
         <outputDirectory>/lib/</outputDirectory>
      </binaries>
      <includes>
-       <include>org.apache.ranger:sampleapp</include>
+       <include>com.spyder.security:sampleapp</include>
      </includes>
     </moduleSet>
    </moduleSets>

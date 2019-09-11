@@ -21,19 +21,17 @@
     <name>Ranger Examples - SampleApp</name>
     <description>Ranger Examples - SampleApp</description>
     <packaging>jar</packaging>
-    <parent>
-        <artifactId>ranger-examples</artifactId>
-        <groupId>org.apache.ranger</groupId>
-        <version>2.1.0-SNAPSHOT</version>
-    </parent>
+    <groupId>com.spyder.security</groupId>
+    <version>0.1-ALPHA</version>
     <properties>
         <maven.version.required>3.3.3</maven.version.required>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <java.version.required>1.8</java.version.required>
         <javac.source.version>1.8</javac.source.version>
         <javac.target.version>1.8</javac.target.version>
         <commons.logging.version>1.2</commons.logging.version>
         <log4j.version>1.2.17</log4j.version>
-
     </properties>
     <dependencies>
         <dependency>
@@ -45,6 +43,13 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>${log4j.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.ranger/ranger-plugins-common -->
+        <dependency>
+          <groupId>org.apache.ranger</groupId>
+          <artifactId>ranger-plugins-common</artifactId>
+          <version>1.2.0</version>
         </dependency>
     </dependencies>
     <build>
@@ -61,7 +66,7 @@
 					<!-- MainClass in mainfest make a executable jar -->
 					<archive>
 					  <manifest>
-						<mainClass>org.apache.ranger.examples.sampleapp.SampleApp</mainClass>
+						<mainClass>com.spyder.security.sampleapp.SampleApp</mainClass>
 					  </manifest>
 					</archive>
 
@@ -69,7 +74,7 @@
 				<executions>
 				  <execution>
 					<id>make-assembly</id>
-                    <!-- bind to the packaging phase -->
+          <!-- bind to the packaging phase -->
 					<phase>package</phase> 
 					<goals>
 						<goal>single</goal>
