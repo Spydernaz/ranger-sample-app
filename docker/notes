@@ -1,0 +1,11 @@
+# create a new project from maven
+mvn archetype:generate -DgroupId=com.spyder.security -DartifactId=http_ranger_integration -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+# Build from source
+mvn clean compile package -Dmaven.test.skip=true
+
+# Copy target to the ranger-plugins folder
+
+
+# Upload the service config
+curl -u admin:passw0rd -X POST -H "Accept: application/json" -H "Content-Type: application/json" --data @./http_plugin/service_def_http.json http://localhost:6080/service/plugins/definitions

@@ -1,0 +1,17 @@
+version: "3"
+services:
+  db:
+    image: spydernaz/apache-ranger-admin-db:latest
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+  ranger-admin:
+    image: spydernaz/apache-ranger-admin:latest
+    stdin_open: true
+    tty: true
+    depends_on:
+      - "db"
+    ports:
+      - "6080:6080"
+    volumes:
+      - ./ranger-plugins/httpservice/:/opt/ranger-2.0.0-admin/ews/webapp/WEB-INF/classes/ranger-plugins/httpservice/
