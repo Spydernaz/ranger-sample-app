@@ -15,3 +15,11 @@ services:
       - "6080:6080"
     volumes:
       - ./ranger-plugins/httpservice/:/opt/ranger-2.0.0-admin/ews/webapp/WEB-INF/classes/ranger-plugins/httpservice/
+  webapp:
+    image: spydernaz/ranger-example-webapp:latest
+    depends_on:
+      - ranger-admin
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./webapp/conf/:/opt/ranger-app/conf/
