@@ -1,0 +1,49 @@
+{
+    "entityDefs": [
+        {
+            "category": "ENTITY",
+            "createdBy": "spydernaz",
+            "updatedBy": "spydernaz",
+            "version": 1,
+            "superTypes": [
+                "Asset"
+            ],
+            "name": "http_path_2",
+            "description": "Node in Neo4J",
+            "attributeDefs": [
+                {
+                    "name": "route",
+                    "typeName": "string",
+                    "isOptional": false,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": true
+                },
+                {
+                    "name": "host",
+                    "typeName": "string",
+                    "isOptional": false,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": true
+                },
+                {
+                    "name": "allowed_methods",
+                    "typeName": "array<string>",
+                    "isOptional": true,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": true
+                },
+                {
+                    "name": "accepted_paramaters",
+                    "typeName": "array<string>",
+                    "isOptional": true,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": true
+                }
+            ]
+        }
+    ]
+}
