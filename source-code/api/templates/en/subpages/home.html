@@ -1,0 +1,113 @@
+{% extends "en/index.html" %}
+{% block body %}
+
+<div class=container-fluid>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1 class="display-4 text-center">Context Selection</h1>
+                <p class="lead text-center">Welcome to V1.0 of the OrgIntel UI. This interface will help you search and gether information about entities in a graphical manner.
+                     It provides a veneer over the API that allows access to our backend databases.
+                </p>
+                <!-- <div class="col-md-12 text-center">
+                        <a href="{{ url_for('homepage') }}"><button class="btn btn-primary col-6 center-block">CLEAR RESULTS</button></a>
+                </div> -->
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+    </div>
+
+    <div style="align-content: center;">
+            <div class="alert-container" role="alert">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for m in messages %}
+                            {% if m[1] == "Success" %}
+                                <div class="sufee-alert alert with-close alert-success alert-dismissible fade show" role=alert>
+                                    <span class="badge badge-pill badge-success">Success</span>
+                                    {{ m[0] }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden=true>&times</span></button>
+                                </div>
+                            {% elif m[1] == "Info" %}
+                                <div class="sufee-alert alert with-close alert-seconday alert-dismissible fade show" role=alert>
+                                    <span class="badge badge-pill badge-info">Info</span>
+                                    {{ m[0] }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden=true>&times</span></button>
+                                </div>
+                            {% elif m[1] == "Warning" %}
+                                <div class="sufee-alert alert with-close alert-warning alert-dismissible fade show" role=alert>
+                                    <span class="badge badge-pill badge-warning">Warning</span>
+                                    {{ m[0] }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden=true>&times</span></button>
+                                </div>
+                            {% elif m[1] == "Danger" %}
+                                <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show" role=alert>
+                                    <span class="badge badge-pill badge-danger">Danger</span>
+                                    {{ m[0] }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden=true>&times</span></button>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+
+
+    <style>
+        /* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid #f00;
+}
+    </style>
+    <div class="row justify-content-md-center">
+        <form action="{{ url_for('submitcontext') }}" accept-charset="UTF-8" method="post" id="searchform">
+            <input type=text class="form-control" id=username name=username placeholder="username" />
+            <br /><br /><h3>Please select a context:</h3><br /><br />
+            <div class="forg-group">
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="context-ml">
+                        <input class="form-check-input" type="radio" name="context" id="context-ml" value="ML">
+                        <img class=text-center src="{{ url_for('static', filename='images/ML-logo.png')}}">
+                        <p>Machine Learning & Training</p>
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="context-de">
+                        <input class="form-check-input" type="radio" name="context" id="context-de" value="DE">
+                        <img class=text-center src="{{ url_for('static', filename='images/DE-logo.png')}}">
+                        <p>Data Exploration</p>
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="context-bm">
+                        <input class="form-check-input" type="radio" name="context" id="context-bm" value="BM">
+                        <img class=text-center src="{{ url_for('static', filename='images/BM-logo.png')}}">
+                        <p>Benchmarking</p>
+                    </label>
+                </div>
+            </div>  
+            <br /><br /><br />
+            <div class="col-sm-10">
+                <input type="submit" name="submit" value="Search" class="btn btn-primary col-12" data-disable-with="Search">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
