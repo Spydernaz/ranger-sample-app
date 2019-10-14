@@ -50,6 +50,13 @@ def submitcontext():
         context = request.form["context"]
         headers = {"content-type": "application/json"}
 
+        if (username == "" or username == None):
+            flash([f"There was no username provided in the context request", "Warning"])
+            return redirect(url_for('homepage'))
+
+        if username == "easterEggz":
+            return redirect("https://thecodinglove.com/when-i-try-to-bypass-a-security-feature")
+
         contextFile = {}
         filename = "context.txt"
 
@@ -82,7 +89,7 @@ def submitcontext():
         if (updated):
             flash([f"Successfully updated user {username}'s context to {context}", "Success"])
         else:
-            flash(["Successfully set your context", "Success"])
+            flash([f"Successfully set user {username}'s context to {context}", "Success"])
 
 
         return redirect(url_for('homepage'))

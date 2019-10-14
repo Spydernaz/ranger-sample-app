@@ -1,0 +1,698 @@
+{
+    "id": 100,
+    "guid": "0d047248-baff-4cf9-8e9e-d5d377284b2e",
+    "isEnabled": true,
+    "createTime": 1568053595463,
+    "updateTime": 1568053600595,
+    "version": 13,
+    "name": "tag",
+    "implClass": "org.apache.ranger.services.tag.RangerServiceTag",
+    "label": "TAG",
+    "description": "TAG Service Definition",
+    "options": {
+        "enableDenyAndExceptionsInPolicies": "true",
+        "ui.pages": "tag-based-policies"
+    },
+    "configs": [],
+    "resources": [
+        {
+            "itemId": 1,
+            "name": "tag",
+            "type": "string",
+            "level": 1,
+            "mandatory": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": false,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": "false",
+                "ignoreCase": "false"
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "{ \"singleValue\":true }",
+            "label": "TAG",
+            "description": "TAG",
+            "accessTypeRestrictions": [],
+            "isValidLeaf": true
+        }
+    ],
+    "accessTypes": [
+        {
+            "itemId": 1002,
+            "name": "hdfs:read",
+            "label": "Read",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 1003,
+            "name": "hdfs:write",
+            "label": "Write",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 1004,
+            "name": "hdfs:execute",
+            "label": "Execute",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 2003,
+            "name": "hbase:read",
+            "label": "Read",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 2004,
+            "name": "hbase:write",
+            "label": "Write",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 2005,
+            "name": "hbase:create",
+            "label": "Create",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 2006,
+            "name": "hbase:admin",
+            "label": "Admin",
+            "impliedGrants": [
+                "hbase:create",
+                "hbase:write",
+                "hbase:read"
+            ]
+        },
+        {
+            "itemId": 3004,
+            "name": "hive:select",
+            "label": "select",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3005,
+            "name": "hive:update",
+            "label": "update",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3006,
+            "name": "hive:create",
+            "label": "Create",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3007,
+            "name": "hive:drop",
+            "label": "Drop",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3008,
+            "name": "hive:alter",
+            "label": "Alter",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3009,
+            "name": "hive:index",
+            "label": "Index",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3010,
+            "name": "hive:lock",
+            "label": "Lock",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3011,
+            "name": "hive:all",
+            "label": "All",
+            "impliedGrants": [
+                "hive:serviceadmin",
+                "hive:repladmin",
+                "hive:write",
+                "hive:read",
+                "hive:lock",
+                "hive:index",
+                "hive:alter",
+                "hive:drop",
+                "hive:create",
+                "hive:update",
+                "hive:select"
+            ]
+        },
+        {
+            "itemId": 3012,
+            "name": "hive:read",
+            "label": "Read",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3013,
+            "name": "hive:write",
+            "label": "Write",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3014,
+            "name": "hive:repladmin",
+            "label": "ReplAdmin",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3015,
+            "name": "hive:serviceadmin",
+            "label": "Service Admin",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3016,
+            "name": "hive:tempudfadmin",
+            "label": "Temporary UDF Admin",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 7008,
+            "name": "kms:create",
+            "label": "Create",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 7009,
+            "name": "kms:delete",
+            "label": "Delete",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 7010,
+            "name": "kms:rollover",
+            "label": "Rollover",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 7011,
+            "name": "kms:setkeymaterial",
+            "label": "Set Key Material",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 7012,
+            "name": "kms:get",
+            "label": "Get",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 7013,
+            "name": "kms:getkeys",
+            "label": "Get Keys",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 7014,
+            "name": "kms:getmetadata",
+            "label": "Get Metadata",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 7015,
+            "name": "kms:generateeek",
+            "label": "Generate EEK",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 7016,
+            "name": "kms:decrypteek",
+            "label": "Decrypt EEK",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 5006,
+            "name": "knox:allow",
+            "label": "Allow",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6007,
+            "name": "storm:submitTopology",
+            "label": "Submit Topology",
+            "impliedGrants": [
+                "storm:fileDownload",
+                "storm:fileUpload"
+            ]
+        },
+        {
+            "itemId": 6008,
+            "name": "storm:fileUpload",
+            "label": "File Upload",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6011,
+            "name": "storm:fileDownload",
+            "label": "File Download",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6012,
+            "name": "storm:killTopology",
+            "label": "Kill Topology",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6013,
+            "name": "storm:rebalance",
+            "label": "Rebalance",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6014,
+            "name": "storm:activate",
+            "label": "Activate",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6015,
+            "name": "storm:deactivate",
+            "label": "Deactivate",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6016,
+            "name": "storm:getTopologyConf",
+            "label": "Get Topology Conf",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6017,
+            "name": "storm:getTopology",
+            "label": "Get Topology",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6018,
+            "name": "storm:getUserTopology",
+            "label": "Get User Topology",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6019,
+            "name": "storm:getTopologyInfo",
+            "label": "Get Topology Info",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 6020,
+            "name": "storm:uploadNewCredentials",
+            "label": "Upload New Credential",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 4005,
+            "name": "yarn:submit-app",
+            "label": "submit-app",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 4006,
+            "name": "yarn:admin-queue",
+            "label": "admin-queue",
+            "impliedGrants": [
+                "yarn:submit-app"
+            ]
+        },
+        {
+            "itemId": 9010,
+            "name": "kafka:publish",
+            "label": "Publish",
+            "impliedGrants": [
+                "kafka:describe"
+            ]
+        },
+        {
+            "itemId": 9011,
+            "name": "kafka:consume",
+            "label": "Consume",
+            "impliedGrants": [
+                "kafka:describe"
+            ]
+        },
+        {
+            "itemId": 9014,
+            "name": "kafka:configure",
+            "label": "Configure",
+            "impliedGrants": [
+                "kafka:describe"
+            ]
+        },
+        {
+            "itemId": 9015,
+            "name": "kafka:describe",
+            "label": "Describe",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 9017,
+            "name": "kafka:create",
+            "label": "Create",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 9018,
+            "name": "kafka:delete",
+            "label": "Delete",
+            "impliedGrants": [
+                "kafka:describe"
+            ]
+        },
+        {
+            "itemId": 9016,
+            "name": "kafka:kafka_admin",
+            "label": "Kafka Admin",
+            "impliedGrants": [
+                "kafka:delete",
+                "kafka:create",
+                "kafka:describe",
+                "kafka:configure",
+                "kafka:consume",
+                "kafka:publish"
+            ]
+        },
+        {
+            "itemId": 9019,
+            "name": "kafka:idempotent_write",
+            "label": "Idempotent Write",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 9020,
+            "name": "kafka:describe_configs",
+            "label": "Describe Configs",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 9021,
+            "name": "kafka:alter_configs",
+            "label": "Alter Configs",
+            "impliedGrants": [
+                "kafka:describe_configs"
+            ]
+        },
+        {
+            "itemId": 8108,
+            "name": "solr:query",
+            "label": "Query",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 8208,
+            "name": "solr:update",
+            "label": "Update",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 8308,
+            "name": "solr:others",
+            "label": "Others",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 8908,
+            "name": "solr:solr_admin",
+            "label": "Solr Admin",
+            "impliedGrants": [
+                "solr:others",
+                "solr:update",
+                "solr:query"
+            ]
+        },
+        {
+            "itemId": 10110,
+            "name": "nifi:READ",
+            "label": "Read",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 10210,
+            "name": "nifi:WRITE",
+            "label": "Write",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 13113,
+            "name": "nifi-registry:READ",
+            "label": "Read",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 13213,
+            "name": "nifi-registry:WRITE",
+            "label": "Write",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 13313,
+            "name": "nifi-registry:DELETE",
+            "label": "Delete",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15016,
+            "name": "atlas:type-create",
+            "label": "Create Type",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15017,
+            "name": "atlas:type-update",
+            "label": "UpdateType",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15018,
+            "name": "atlas:type-delete",
+            "label": "Delete Type",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15019,
+            "name": "atlas:entity-read",
+            "label": "Read Entity",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15020,
+            "name": "atlas:entity-create",
+            "label": "Create Entity",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15021,
+            "name": "atlas:entity-update",
+            "label": "Update Entity",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15022,
+            "name": "atlas:entity-delete",
+            "label": "Delete Entity",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15023,
+            "name": "atlas:entity-add-classification",
+            "label": "Add Classification",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15024,
+            "name": "atlas:entity-update-classification",
+            "label": "Update Classification",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15025,
+            "name": "atlas:entity-remove-classification",
+            "label": "Remove Classification",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15026,
+            "name": "atlas:admin-export",
+            "label": "Admin Export",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15027,
+            "name": "atlas:admin-import",
+            "label": "Admin Import",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15028,
+            "name": "atlas:add-relationship",
+            "label": "Add Relationship",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15029,
+            "name": "atlas:update-relationship",
+            "label": "Update Relationship",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15030,
+            "name": "atlas:remove-relationship",
+            "label": "Remove Relationship",
+            "impliedGrants": []
+        }
+    ],
+    "policyConditions": [
+        {
+            "itemId": 1,
+            "name": "accessed-after-expiry",
+            "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptTemplateConditionEvaluator",
+            "evaluatorOptions": {
+                "scriptTemplate": "ctx.isAccessedAfter('expiry_date');"
+            },
+            "uiHint": "{ \"singleValue\":true }",
+            "label": "Accessed after expiry_date (yes/no)?",
+            "description": "Accessed after expiry_date? (yes/no)"
+        },
+        {
+            "itemId": 2,
+            "name": "expression",
+            "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptConditionEvaluator",
+            "evaluatorOptions": {
+                "engineName": "JavaScript",
+                "ui.isMultiline": "true"
+            },
+            "label": "Enter boolean expression",
+            "description": "Boolean expression"
+        }
+    ],
+    "contextEnrichers": [
+        {
+            "itemId": 1,
+            "name": "TagEnricher",
+            "enricher": "org.apache.ranger.plugin.contextenricher.RangerTagEnricher",
+            "enricherOptions": {
+                "tagRetrieverClassName": "org.apache.ranger.plugin.contextenricher.RangerAdminTagRetriever",
+                "tagRefresherPollingInterval": "60000"
+            }
+        },
+        {
+            "itemId": 2, 
+            "name": "CBAC",
+            "enricher": "com.spyder.security.cbac.UserContext",
+            "enricherOptions": { 
+                "contextName" : "PROJECT", 
+                "dataFile":"/etc/ranger/data/userProject.txt"
+            }
+        }
+    ],
+    "enums": [],
+    "dataMaskDef": {
+        "maskTypes": [
+            {
+                "itemId": 3004,
+                "name": "hive:MASK",
+                "label": "Redact",
+                "description": "Replace lowercase with 'x', uppercase with 'X', digits with '0'",
+                "transformer": "mask({col})",
+                "dataMaskOptions": {}
+            },
+            {
+                "itemId": 3005,
+                "name": "hive:MASK_SHOW_LAST_4",
+                "label": "Partial mask: show last 4",
+                "description": "Show last 4 characters; replace rest with 'x'",
+                "transformer": "mask_show_last_n({col}, 4, 'x', 'x', 'x', -1, '1')",
+                "dataMaskOptions": {}
+            },
+            {
+                "itemId": 3006,
+                "name": "hive:MASK_SHOW_FIRST_4",
+                "label": "Partial mask: show first 4",
+                "description": "Show first 4 characters; replace rest with 'x'",
+                "transformer": "mask_show_first_n({col}, 4, 'x', 'x', 'x', -1, '1')",
+                "dataMaskOptions": {}
+            },
+            {
+                "itemId": 3007,
+                "name": "hive:MASK_HASH",
+                "label": "Hash",
+                "description": "Hash the value",
+                "transformer": "mask_hash({col})",
+                "dataMaskOptions": {}
+            },
+            {
+                "itemId": 3008,
+                "name": "hive:MASK_NULL",
+                "label": "Nullify",
+                "description": "Replace with NULL",
+                "dataMaskOptions": {}
+            },
+            {
+                "itemId": 3009,
+                "name": "hive:MASK_NONE",
+                "label": "Unmasked (retain original value)",
+                "description": "No masking",
+                "dataMaskOptions": {}
+            },
+            {
+                "itemId": 3015,
+                "name": "hive:MASK_DATE_SHOW_YEAR",
+                "label": "Date: show only year",
+                "description": "Date: show only year",
+                "transformer": "mask({col}, 'x', 'x', 'x', -1, '1', 1, 0, -1)",
+                "dataMaskOptions": {}
+            },
+            {
+                "itemId": 3016,
+                "name": "hive:CUSTOM",
+                "label": "Custom",
+                "description": "Custom",
+                "dataMaskOptions": {}
+            }
+        ],
+        "accessTypes": [
+            {
+                "itemId": 3004,
+                "name": "hive:select",
+                "label": "select",
+                "impliedGrants": []
+            }
+        ],
+        "resources": [
+            {
+                "itemId": 1,
+                "name": "tag",
+                "type": "string",
+                "level": 1,
+                "mandatory": true,
+                "lookupSupported": true,
+                "recursiveSupported": false,
+                "excludesSupported": false,
+                "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+                "matcherOptions": {
+                    "wildCard": "false",
+                    "ignoreCase": "false"
+                },
+                "validationRegEx": "",
+                "validationMessage": "",
+                "label": "TAG",
+                "description": "TAG",
+                "accessTypeRestrictions": [],
+                "isValidLeaf": true
+            }
+        ]
+    },
+    "rowFilterDef": {
+        "accessTypes": [],
+        "resources": []
+    }
+}

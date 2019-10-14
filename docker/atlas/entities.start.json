@@ -1,0 +1,13 @@
+{
+    "entities": [
+        {
+            "typeName": "Model",
+            "attributes": {
+                "qualifiedName": "5cmodelv1.0-dev#112fe@models.dataagenda.ey.net",
+                "name": "5C Model v1.0-Dev (#112fe)",
+                "outputs": [],
+                "version": "112fe"
+            }
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "entities": [
+        {
+            "guid": "-200",
+            "typeName": "Contract",
+            "attributes": {
+                "qualifiedName": "lbg#123445674@engagaments.dataagenda.ey.net",
+                "name": "LBG Engagement ID # 123445674",
+                "version": "1"
+            },
+            "classifications": [
+                { 
+                    "typeName": "PII",
+                    "propagate": true
+                }
+            ]
+        },
+        {
+            "guid": "-100",
+            "typeName": "permissionOutput",
+            "attributes": {
+                "qualifiedName": "5cmodelv1.0-dev#112fe+lbg#123445674@permissions.legal.dataagenda.ey.net",
+                "name": "LBG Engagement ID # 123445674",
+                "outputs": [
+                    {
+                        "guid": "-300",
+                        "typeName": "hdfs_path"
+                    }
+                ],
+                "inputs":[
+                    {
+                        "guid": "-200",
+                        "typeName": "Contract"
+                    },
+                    {
+                        "uniqueAttributes": {
+                            "qualifiedName": "5cmodelv1.0-dev#112fe@models.dataagenda.ey.net"
+                        },
+                        "typeName": "Model"
+                    }
+                ],
+                "version": "1"
+            },
+            "classifications": [
+                {
+                    "typeName": "classification5c",
+                    "attributes": {
+                        "Context": ["ML", "BM"],
+                        "Channel": 2,
+                        "Country": "UK"
+                    },
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }
+            ]
+        },
+        {
+            "guid": "-300",
+            "typeName": "hdfs_path",
+            "attributes": {
+                "qualifiedName": "hdfs://tdf-globe-m0.hadoop.com:8020/tmp/drivers.csv@tdf-globe",
+                "name": "/tmp/drivers.csv",
+                "path":"hdfs://tdf-globe-m0.hadoop.com:8020/tmp/drivers.csv",
+                "inputs": [
+                    {
+                        "guid":"-100",
+                        "typeName":"permissionOutput"
+                    }
+                ],
+                "version": "1"
+            }
+        }
+    ]
+}

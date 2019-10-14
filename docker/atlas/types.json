@@ -1,0 +1,138 @@
+{
+    "entityDefs": [
+        {
+            "category": "ENTITY",
+            "createdBy": "spydernaz",
+            "updatedBy": "spydernaz",
+            "version": 1,
+            "superTypes": [
+                "DataSet"
+            ],
+            "name": "Contract",
+            "description": "A model for assessing engagements security requirements",
+            "typeVersion": "1",
+            "attributeDefs": [
+                {
+                    "name": "output",
+                    "typeName": "permissionOutput",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 2147483647,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                }
+            ]
+        },
+        {
+            "category": "ENTITY",
+            "createdBy": "spydernaz",
+            "updatedBy": "spydernaz",
+            "version": 1,
+            "superTypes": [
+                "DataSet"
+            ],
+            "name": "Model",
+            "description": "A Machine Learning Model published for use by EY or Client teams",
+            "typeVersion": "1",
+            "attributeDefs": []
+        },
+        {
+            "category": "ENTITY",
+            "createdBy": "spydernaz",
+            "updatedBy": "spydernaz",
+            "version": 1,
+            "superTypes": [
+                "Process"
+            ],
+            "name": "permissionOutput",
+            "description": "A model for assessing engagements security requirements",
+            "typeVersion": "1",
+            "attributeDefs": [
+                {
+                    "name": "outputs",
+                    "typeName": "array<DataSet>",
+                    "isOptional": true,
+                    "cardinality": "SET",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 2147483647,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                },
+                {
+                    "name": "inputs",
+                    "typeName": "array<Asset>",
+                    "isOptional": false,
+                    "cardinality": "SET",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 2147483647,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                }
+            ]
+        }
+    ],
+    "classificationDefs": [
+        {
+            "category": "CLASSIFICATION",
+            "createdBy": "Nathaniel Vala",
+            "version": 1,
+            "name": "classification5c",
+            "description": "classification5c",
+            "typeVersion": "1.0",
+            "attributeDefs": [
+                {
+                    "name": "Country",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                },
+                {
+                    "name": "Channel",
+                    "typeName": "int",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                },
+                {
+                    "name": "Context",
+                    "typeName": "array<string>",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                }
+            ],
+            "superTypes": [],
+            "entityTypes": [],
+            "subTypes": []
+        },
+        {
+            "category": "CLASSIFICATION",
+            "createdBy": "Nathaniel Vala",
+            "version": 1,
+            "name": "PII",
+            "description": "PII",
+            "typeVersion": "1.0",
+            "attributeDefs": [],
+            "superTypes": [],
+            "entityTypes": [],
+            "subTypes": []
+        }
+    ]
+}
