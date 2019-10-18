@@ -2,7 +2,7 @@
     "entity": {
         "status": "ACTIVE",
         "version": 1,
-        "typeName": "http_path_2",
+        "typeName": "http_path",
         "attributes": {
             "name": "getOrgByOrgKey",
             "qualifiedName": "api/v2/getorgkey@orgintelapi.development.ey.com",

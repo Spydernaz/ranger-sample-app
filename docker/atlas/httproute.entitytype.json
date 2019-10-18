@@ -8,7 +8,7 @@
             "superTypes": [
                 "Asset"
             ],
-            "name": "http_path_2",
+            "name": "http_path",
             "description": "Node in Neo4J",
             "attributeDefs": [
                 {
