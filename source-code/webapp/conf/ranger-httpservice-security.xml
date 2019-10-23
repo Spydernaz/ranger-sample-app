@@ -31,7 +31,7 @@ the License.
 
   <property>
     <name>ranger.plugin.httpservice.policy.rest.url</name>
-    <value>http://localhost:6080</value>
+    <value>http://40.121.208.115:6080</value>
     <description>
       URL to Ranger Admin
     </description>

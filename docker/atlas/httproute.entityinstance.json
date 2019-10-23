@@ -2,16 +2,13 @@
     "entity": {
         "status": "ACTIVE",
         "version": 1,
-        "typeName": "http_path",
+        "typeName": "http_path2",
         "attributes": {
-            "name": "getOrgByOrgKey",
-            "qualifiedName": "api/v2/getorgkey@orgintelapi.development.ey.com",
-            "route": "/api/v2/getorgkey",
-            "host": "orgintelapi.development.ey.com",
-            "allowed_methods": [
-                "GET"
-            ],
-            "accepted_paramaters": null
+            "name": "/v2/hello",
+            "qualifiedName": "/v2/hello@tdf-globe",
+            "path":"/v2/hello",
+            "nameServiceId":"helloworldapp",
+            "clusterName":"tdf-globe"
         }
     }
 }

@@ -32,9 +32,10 @@ import org.apache.ranger.plugin.model.RangerPolicy;
 import org.apache.ranger.plugin.model.RangerPolicy.RangerPolicyResource;
 import org.apache.ranger.plugin.model.RangerServiceResource;
 import org.apache.ranger.tagsync.source.atlasrest.RangerAtlasEntity;
+import org.apache.ranger.tagsync.source.atlas.AtlasResourceMapper;
 
 public class AtlasHTTPServiceResourceMapper extends AtlasResourceMapper {
-	public static final String ENTITY_TYPE_HTTP_PATH = "http_path";
+	public static final String ENTITY_TYPE_HTTP_PATH = "http_path2";
 	public static final String RANGER_TYPE_HTTP_PATH = "path";
 	// public static final String TAGSYNC_ATLAS_NAME_SERVICE_IDENTIFIER = ".nameservice.";
 	// public static final String ENTITY_TYPE_HDFS_CLUSTER_AND_NAME_SERVICE_SEPARATOR = "_";
